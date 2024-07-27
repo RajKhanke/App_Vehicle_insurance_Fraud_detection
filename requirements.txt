@@ -7,3 +7,4 @@ wordcloud
 nltk
 google-play-scraper
 networkx
+gunicorn
