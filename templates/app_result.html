@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='app_resultsttyling.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <div class="app-info">
+            <p>App Name: <span class="app-name">{{ app_name }}</span></p>
+        </div>
+        <div class="prediction">
+            <p>Prediction: <span class="prediction-text">{{ result }}</span></p>
+        </div>
+        <div class="analysis-container">
+            <h3>Analysis :</h3>
+            <div class="additional-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Total Reviews</th>
+                            <th>Positive Reviews</th>
+                            <th>Negative Reviews</th>
+                            <th>Neutral Reviews</th>
+                            <th>Average Rating</th>
+                            <th>Positive %</th>
+                            <th>Negative %</th>
+                            <th>Neutral %</th>
+                            <th>Replied %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- Populate the table with dynamic data -->
+                            <td>{{ total_reviews }}</td>
+                            <td>{{ positive_reviews }}</td>
+                            <td>{{ negative_reviews }}</td>
+                            <td>{{ neutral_reviews }}</td>
+                            <td>{{ average_rating }}</td>
+                            <td>{{ positive_percentage }}</td>
+                            <td>{{ negative_percentage }}</td>
+                            <td>{{ neutral_percentage }}</td>
+                            <td>{{ replied_percentage }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="plots-container">
+        <h4>Graphical Analysis : </h4>
+        <div class="row">
+            <!-- Plot 1 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot1 }}" alt="Plot 1">
+            </div>
+            <!-- Plot 2 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot2 }}" alt="Plot 2">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Plot 3 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot3 }}" alt="Plot 3">
+            </div>
+            <!-- Plot 4 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot4 }}" alt="Plot 4">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Plot 5 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot5 }}" alt="Plot 5">
+            </div>
+            <!-- Plot 6 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot6 }}" alt="Plot 6">
+            </div>
+        </div>
+        <!-- Dataset Display -->
+        <br>
+        <div class="buttons">
+            <button onclick="window.location.href='/mobile_app'">Back</button>
+        </div>
+</body>
+</html>

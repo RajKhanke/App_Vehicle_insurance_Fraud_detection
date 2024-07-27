@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Insurance Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='vehiclestyling.css') }}">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo">
+    </div>
+    <div class="navbar-links">
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Predict</button>
+            <div class="dropdown-content">
+                <a href="/predict/insurance">Insurance</a>
+                <a href="/predict/app">App</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Analysis</button>
+            <div class="dropdown-content">
+                <a href="/analysis/insurance">Insurance</a>
+                <a href="/analysis/app">App</a>
+            </div>
+        </div>
+        <a href="/dataset">Dataset</a>
+    </div>
+</div>
+ 
+
+<!-- Content -->
+<div class="content">
+    <h1>Car Insurance Fraud Prediction</h1>
+    <form id="insuranceForm" action="/predict/insurance" method="post">
+    <form id="insuranceForm">
+        <div class="scrollbar">
+            <!-- Car Company -->
+            <label for="CarCompany">Car Company:</label>
+            <select id="CarCompany" name="CarCompany" required>
+                <option value="">Select Car Company</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="Pontiac">Pontiac</option>
+                <option value="Mazda">Mazda</option>
+                <option value="Ford">Ford</option>
+                <option value="Accura">Accura</option>
+                <option value="Saab">Saab</option>
+                <option value="Mercury">Mercury</option>
+                <option value="Dodge">Dodge</option>
+                <option value="Saturn">Saturn</option>
+                <option value="VW">VW</option>
+                <option value="BMW">BMW</option>
+                <option value="Nisson">Nisson</option>
+                <option value="Jaguar">Jaguar</option>
+                <option value="Porche">Porche</option>
+                <option value="Mecedes">Mecedes</option>
+                <option value="Ferrari">Ferrari</option>
+            </select><br><br>
+            
+            <!-- Accident Area -->
+            <label for="AccidentArea">Accident Area (Urban/Rural):</label>
+            <select id="AccidentArea" name="AccidentArea" required>
+                <option value="">Select Accident Area</option>
+                <option value="Urban">Urban</option>
+                <option value="Rural">Rural</option>
+            </select><br><br>
+            
+            <!-- Owner's Gender -->
+            <label for="OwnerGender">Owner's Gender (Male/Female):</label>
+            <select id="OwnerGender" name="OwnerGender" required>
+                <option value="">Select Owner's Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br><br>
+            
+            <!-- Owner's Age -->
+            <label for="OwnerAge">Owner's Age:</label>
+            <input type="number" id="OwnerAge" name="OwnerAge" required><br><br>
+            
+            <!-- Fault -->
+            <label for="Fault">Fault (Policy Holder/Third Party):</label>
+            <select id="Fault" name="Fault" required>
+                <option value="">Select Fault</option>
+                <option value="Policy Holder">Policy Holder</option>
+                <option value="Third Party">Third Party</option>
+            </select><br><br>
+            
+            <!-- Car Category -->
+            <label for="CarCategory">Car Category (Sedan/Sport/Utility):</label>
+            <select id="CarCategory" name="CarCategory" required>
+                <option value="">Select Car Category</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Sport">Sport</option>
+                <option value="Utility">Utility</option>
+            </select><br><br>
+            
+            <!-- Car Price -->
+            <label for="CarPrice">Car Price:</label>
+            <input type="number" id="CarPrice" name="CarPrice" required><br><br>
+            
+            <!-- Police Report Filed -->
+            <label for="PoliceReportFiled">Was a Police Report Filed? (Yes/No):</label>
+            <select id="PoliceReportFiled" name="PoliceReportFiled" required>
+                <option value="">Select Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+            
+            <!-- Witness Present -->
+            <label for="WitnessPresent">Was a Witness Present? (Yes/No):</label>
+            <select id="WitnessPresent" name="WitnessPresent" required>
+                <option value="">Select Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+            
+            <!-- Agent Type -->
+            <label for="AgentType">Agent Type (External/Internal):</label>
+            <select id="AgentType" name="AgentType" required>
+                <option value="">Select Agent Type</option>
+                <option value="External">External</option>
+                <option value="Internal">Internal</option>
+            </select><br><br>
+            
+            <!-- Number of Suppliments -->
+            <label for="NumberOfSuppliments">Number of Suppliments:</label>
+            <input type="number" id="NumberOfSuppliments" name="NumberOfSuppliments" required><br><br>
+            
+            <!-- Base Policy -->
+            <label for="BasePolicy">Base Policy (All Perils/Collision/Liability):</label>
+            <select id="BasePolicy" name="BasePolicy" required>
+                <option value="">Select Base Policy</option>
+                <option value="All Perils">All Perils</option>
+                <option value="Collision">Collision</option>
+                <option value="Liability">Liability</option>
+            </select><br><br>
+            
+            <!-- Is Address Changed -->
+            <label for="IsAddressChanged">Was the Address Changed after Insurance? (Yes/No):</label>
+            <select id="IsAddressChanged" name="IsAddressChanged" required>
+                <option value="">Select Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+            
+            <!-- Past Number of Claims -->
+            <label for="PastNumberOfClaims">Past Number of Insurance Claims:</label>
+            <input type="number" id="PastNumberOfClaims" name="PastNumberOfClaims" required><br><br>
+        </div>
+        <div class="button-container">
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="button" onclick="clearForm()" class="clear-button">Clear</button>
+            
+        </div>
+    </form>
+</div>
+<script src="{{ url_for('static', filename='vehicle_script.js') }}"></script>
+</body>
+</html>

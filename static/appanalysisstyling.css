@@ -1,0 +1,90 @@
+/* Resetting default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Dataset display styling */
+.dataset-container {
+    margin-top: 80px;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: visible; /* Allow overflow for printing */
+    margin-left: 320px;
+}
+
+.scrollbar {
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #f2eec5;
+}
+
+th {
+    background-color: #25efa1;
+}
+
+.visualization {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plot-container {
+    margin: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: -10px; /* Adjust margin top */
+    margin-bottom: 20px; /* Add margin bottom */
+}
+
+.buttons button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 0 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(134, 4, 4);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #001;
+}
+

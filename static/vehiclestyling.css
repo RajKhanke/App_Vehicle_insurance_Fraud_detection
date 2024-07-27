@@ -1,0 +1,171 @@
+/* Resetting default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    height: 100%; /* Set height to 100% */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../static/images/car2.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+.navbar {
+    background-color: #001;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 999; /* Ensure navbar is above other content */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo height */
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; /* Adjusted margin */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black; /* Dropdown background color */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 3px; /* Adjusted margin */
+}
+
+.dropdown-content a {
+    color: white; /* Dropdown text color */
+    padding: 12px 16px; /* Padding for normal state */
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, padding 0.3s; /* Add padding transition */
+}
+
+.dropdown-content a:hover {
+    background-color: grey; /* Hover color */
+    padding: 15px 16px; /* Increased padding on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content {
+    margin-top: 50px; /* Decrease distance between prediction result and prediction */
+    padding: 20px;
+    margin-left: 30px; /* Adjusted margin to make form left-aligned */
+}
+
+h1 {
+    text-align: center;
+    color: rgb(229, 252, 229); /* Change color to white */
+    font-size: 50px; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    text-shadow: 2px 2px 4px #050000; /* Add a text shadow for a 3D effect */
+    margin-top: 30px; /* Move the element upwards */
+    margin-right: 5px; /* Move the element towards the right */
+}
+
+form {
+    max-width: 600px;
+    background-color: #252525; /* Dark background color for the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 5px;
+}
+
+.scrollbar {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white; /* Text color for labels */
+}
+
+input[type="number"],
+select {
+    width: calc(100% - 20px); /* Adjusted width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.clear-button,
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clear-button {
+    background-color: #555; /* Dark color for Clear button */
+}
+
+.submit-button {
+    background-color: #4caf50; /* Green color for Predict button */
+}
+
+.clear-button:hover {
+    background-color: #444;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}

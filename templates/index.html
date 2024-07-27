@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo">
+    </div>
+    <div class="navbar-links">
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Predict</button>
+            <div class="dropdown-content">
+                <a href="/predict/insurance">Insurance</a>
+                <a href="/predict/app">App</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Analysis</button>
+            <div class="dropdown-content">
+                <a href="/analysis/insurance">Insurance</a>
+                <a href="/analysis/app">App</a>
+            </div>
+        </div>
+        <a href="/dataset">Dataset</a>
+    </div>
+</div>
+    
+    
+<!-- Content -->
+<div class="content">
+    <h1>Insurance & App Fraud Detection</h1>
+    <p>Insurance & App Fraud Detection is a web application designed to identify fraudulent activities in Vehicle insurance claims and to detect fraudulent apps on the Play Store using machine learning algorithms and Data Visualization techniques. The project is made by SY CS(AIML) students from Vishwakarma Institute of Technology Pune</p>
+</div>
+
+<!-- Buttons -->
+<div class="buttons">
+    <button onclick="window.location.href='/vehicle_insurance'">Vehicle Insurance</button>
+    <button onclick="window.location.href='/mobile_app'">Mobile App</button>
+</div>
+
+</body>
+</html>

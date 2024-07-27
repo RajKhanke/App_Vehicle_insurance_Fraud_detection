@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f4; /* Cream colored background */
+    padding: 20px;
+}
+
+h1 {
+    text-align: left; /* Align the heading to the left */
+    font-size: 50px; /* Set the font size for the heading */
+    color: #000; /* Black color for heading */
+    font-weight: bold; /* Bold font for heading */
+}
+
+.container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    flex-direction: column; /* Display items vertically */
+}
+
+.result-container {
+    text-align: center; /* Align the result container to the center */
+    margin-top: 30px; /* Adjusted margin-top to move the prediction upwards */
+}
+
+.prediction {
+    font-size: 40px; /* Larger font size for prediction */
+    font-weight: bold; /* Bold font for prediction */
+    color: #008000;
+    text-align: center; /* Center prediction */
+    margin-top: -20px; /* Move the prediction upwards */
+}
+
+.prediction-container {
+    text-align: center; /* Center prediction container */
+}
+
+.visualization {
+    margin: 10px; /* Add margin around each visualization */
+    display: flex;
+    justify-content: center; /* Center visualizations horizontally */
+    flex-direction: column; /* Display visualizations vertically */
+    align-items: center;
+}
+
+.plot-container {
+    margin: 10px; /* Add margin around each plot */
+}
+
+.row {
+    display: flex; /* Use flexbox for rows */
+    justify-content: center; /* Center plots within the row */
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 10px; /* Adjust margin top */
+}
+
+.buttons button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 0 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(134, 4, 4);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #001;
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud App Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fraudappstyling.css') }}">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo">
+    </div>
+    <div class="navbar-links">
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Predict</button>
+            <div class="dropdown-content">
+                <a href="/predict/insurance">Insurance</a>
+                <a href="/predict/app">App</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Analysis</button>
+            <div class="dropdown-content">
+                <a href="/analysis/insurance">Insurance</a>
+                <a href="/analysis/app">App</a>
+            </div>
+        </div>
+        <a href="/dataset">Dataset</a>
+    </div>
+</div>
+
+<!-- Header -->
+<div class="header">
+    <h1>Fraud App Prediction</h1>
+</div>
+
+<!-- Input Container -->
+<div class="input-container">
+    <form action="/predict/app" method="POST">
+        <div class="input-group">
+            <label for="app-id">App ID:</label>
+            <input type="text" id="app-id" name="app-id" placeholder="Enter App ID">
+        </div>
+        <div class="input-group">
+            <label for="app-name">App Name:</label>
+            <input type="text" id="app-name" name="app-name" placeholder="Enter App Name">
+        </div>
+        <div class="button-group">
+            <button type="button" onclick="clearFormApp()" class="clear-button">Clear</button>
+            <button class="submit-button" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<script src="{{ url_for('static', filename='vehicle_script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* Resetting default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    height: 100%; /* Set height to 100% */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    overflow-y: auto; /* Show vertical scrollbar if needed */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    margin-bottom: 0; /* Remove default bottom margin */
+}
+
+.navbar {
+    background-color: #001;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 999; /* Ensure navbar is above other content */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo height */
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; /* Adjusted margin */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black; /* Dropdown background color */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 3px; /* Adjusted margin */
+}
+
+.dropdown-content a {
+    color: white; /* Dropdown text color */
+    padding: 12px 16px; /* Padding for normal state */
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, padding 0.3s; /* Add padding transition */
+}
+
+.dropdown-content a:hover {
+    background-color: grey; /* Hover color */
+    padding: 15px 16px; /* Increased padding on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* CSS for dataset display */
+.dataset-container {
+    margin: 60px auto;
+    max-width: 1400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.scrollbar {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 400px; /* Set max height to prevent overflow */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #f2eec5;
+}
+
+th {
+    background-color: #25efa1; /* Light gray background for table headers */
+}
+
+.plots-container {
+    margin: 10px; /* Add margin around each visualization */
+    display: flex;
+    justify-content: center; /* Center visualizations horizontally */
+    flex-direction: column; /* Display visualizations vertically */
+    align-items: center;
+}
+
+.plot {
+    margin: 10px; /* Add margin around each plot */
+}
+
+.row {
+    display: flex; /* Use flexbox for rows */
+    justify-content: center; /* Center plots within the row */
+}
+/* Additional styling for tables */
+.dataset-container table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 95%; /* Set width to fit the screen */
+}
+
+.dataset-container th,
+.dataset-container td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Add border */
+}
+
+.dataset-container th {
+    background-color: #25efa1;
+    color: #333;
+}
+
+/* Apply scrollbar only if needed */
+.scrollbar table {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Additional table */
+.additional-table-container {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%; /* Set width to fit the screen */
+}
+
+.additional-table-container th,
+.additional-table-container td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Add border */
+}
+
+.additional-table-container th {
+    background-color: #25efa1;
+    color: #333;
+}

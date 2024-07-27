@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='insurance_analysisstyling.css') }}">
+</head>
+<body>
+    
+<!-- Navigation Bar -->
+<div class="navbar">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo">
+    </div>
+    <div class="navbar-links">
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Predict</button>
+            <div class="dropdown-content">
+                <a href="/predict/insurance">Insurance</a>
+                <a href="/predict/app">App</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Analysis</button>
+            <div class="dropdown-content">
+                <a href="/analysis/insurance">Insurance</a>
+                <a href="/analysis/app">App</a>
+            </div>
+        </div>
+        <a href="/dataset">Dataset</a>
+    </div>
+</div>
+    <div class="plots-container">
+        <h4>Graphical Analysis : </h4>
+        <div class="row">
+            <!-- Plot 1 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot1 }}" alt="Plot 1">
+            </div>
+            <!-- Plot 2 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot2 }}" alt="Plot 2">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Plot 3 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot3 }}" alt="Plot 3">
+            </div>
+            <!-- Plot 4 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot4 }}" alt="Plot 4">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Plot 5 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot5 }}" alt="Plot 5">
+            </div>
+            <!-- Plot 6 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot6 }}" alt="Plot 6">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Plot 7 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot7 }}" alt="Plot 7">
+            </div>
+            <!-- Plot 8 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot8 }}" alt="Plot 8">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Plot 7 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot9 }}" alt="Plot 7">
+            </div>
+            <!-- Plot 8 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot10 }}" alt="Plot 8">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Plot 7 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot11 }}" alt="Plot 7">
+            </div>
+            <!-- Plot 8 -->
+            <div class="plot">
+                <img src="data:image/png;base64,{{ plot12 }}" alt="Plot 8">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

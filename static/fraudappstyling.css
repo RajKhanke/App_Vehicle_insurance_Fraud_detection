@@ -1,0 +1,174 @@
+/* Resetting default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    height: 100%; /* Set height to 100% */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../static/images/fraudapp.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+.navbar {
+    background-color: #001;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 999; /* Ensure navbar is above other content */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo height */
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; /* Adjusted margin */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black; /* Dropdown background color */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 3px; /* Adjusted margin */
+}
+
+.dropdown-content a {
+    color: white; /* Dropdown text color */
+    padding: 12px 16px; /* Padding for normal state */
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, padding 0.3s; /* Add padding transition */
+}
+
+.dropdown-content a:hover {
+    background-color: grey; /* Hover color */
+    padding: 15px 16px; /* Increased padding on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    margin-top: 120px; /* Adjust as needed */
+}
+/* Header h1 styling */
+.header h1 {
+    color: #fff; /* White color */
+    font-size: 80px; /* Increased font size */
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Text shadow */
+    margin-top: 50px; /* Adjusted margin */
+}
+
+/* Input container styling */
+.input-container {
+    background-color: #2a2b2a; /* Light grey background color */
+    padding: 60px; /* Increased padding */
+    border-radius: 8px;
+    margin: 30px auto; /* Center the container */
+    max-width: 700px; /* Adjusted max width */
+    max-height: 400px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.input-group label {
+    margin-top: -10px;
+    display: block;
+    margin-bottom: 8px; /* Adjusted margin */
+    color: #faf9f9; /* Dark gray text color */
+    font-weight: bold; /* Bold font weight */
+}
+
+.input-group input {
+    width: calc(100% - 24px); /* Adjusted width */
+    padding: 12px; /* Increased padding */
+    border: 1px solid #222323;
+    border-radius: 6px;
+    color: #080808; /* Dark gray text color */
+}
+
+/* Button group styling */
+.button-group {
+    text-align: center;
+    margin-top: 20px; /* Adjusted margin */
+}
+
+/* Clear button styling */
+.clear-button,
+.submit-button {
+    display: inline-block;
+    padding: 10px 21px; /* Increased padding */
+    border: none;
+    border-radius: 6px;
+    color: #fff; /* White text color */
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.clear-button {
+    background-color: #880303; /* Dark grey color for Clear button */
+    float: left;
+}
+
+.submit-button {
+    background-color: #4caf50; /* Green color for Submit button */
+    float: right;
+}
+
+/* Hover effect for buttons */
+.clear-button:hover {
+    background-color: #030303; /* Darker grey on hover */
+}
+
+.submit-button:hover {
+    background-color: #080808; /* Darker green on hover */
+}

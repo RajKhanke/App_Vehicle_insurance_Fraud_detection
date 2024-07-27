@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Display</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='datasetstyling.css') }}">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo">
+    </div>
+    <div class="navbar-links">
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Predict</button>
+            <div class="dropdown-content">
+                <a href="/predict/insurance">Insurance</a>
+                <a href="/predict/app">App</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Analysis</button>
+            <div class="dropdown-content">
+                <a href="/analysis/insurance">Insurance</a>
+                <a href="/analysis/app">App</a>
+            </div>
+        </div>
+        <a href="/dataset">Dataset</a>
+    </div>
+</div>
+
+<!-- Dataset Table -->
+<div class="dataset-container">
+    <h1>Dataset Display :</h1>
+    <div class="scrollbar">
+        <table>
+            <thead>
+                <tr>
+                    <th>Car Company</th>
+                    <th>Accident Area</th>
+                    <th>Owner Gender</th>
+                    <th>Owner Age</th>
+                    <th>Fault</th>
+                    <th>Car Category</th>
+                    <th>Car Price</th>
+                    <th>Is Fraud</th>
+                    <th>Police Report Filed</th>
+                    <th>Witness Present</th>
+                    <th>Agent Type</th>
+                    <th>Number of Suppliments</th>
+                    <th>Base Policy</th>
+                    <th>Is Address Changed</th>
+                    <th>Past Number of Claims</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through the first 10 rows of the dataset to display -->
+                {% for index, row in df.iterrows() %}
+                <tr>
+                    <td>{{ row['CarCompany'] }}</td>
+                    <td>{{ row['AccidentArea'] }}</td>
+                    <td>{{ row['OwnerGender'] }}</td>
+                    <td>{{ row['OwnerAge'] }}</td>
+                    <td>{{ row['Fault'] }}</td>
+                    <td>{{ row['CarCategory'] }}</td>
+                    <td>{{ row['CarPrice'] }}</td>
+                    <td>{{ row['IsFraud'] }}</td>
+                    <td>{{ row['PoliceReportFiled'] }}</td>
+                    <td>{{ row['WitnessPresent'] }}</td>
+                    <td>{{ row['AgentType'] }}</td>
+                    <td>{{ row['NumberOfSuppliments'] }}</td>
+                    <td>{{ row['BasePolicy'] }}</td>
+                    <td>{{ row['IsAddressChanged'] }}</td>
+                    <td>{{ row['PastNumberOfClaims'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Plots -->
+<div class="plots-container">
+    <div class="row">
+        <div class="plot">
+            <img src="data:image/png;base64,{{ plot1 }}" alt="Plot 1">
+        </div>
+        <div class="plot">
+            <img src="data:image/png;base64,{{ plot2 }}" alt="Plot 2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="plot">
+            <img src="data:image/png;base64,{{ plot3 }}" alt="Plot 3">
+        </div>
+        <div class="plot">
+            <img src="data:image/png;base64,{{ plot4 }}" alt="Plot 4">
+        </div>
+    </div>
+    <div class="row">
+        <div class="plot">
+            <img src="data:image/png;base64,{{ plot5 }}" alt="Plot 5">
+        </div>
+        <div class="plot">
+            <img src="data:image/png;base64,{{ plot6 }}" alt="Plot 6">
+        </div>
+    </div>
+    <div class="row">
+        <div class="plot">
+            <img src="data:image/png;base64,{{ plot7 }}" alt="Plot 7">
+        </div>
+        <div class="plot">
+            <img src="data:image/png;base64,{{ plot8 }}" alt="Plot 8">
+        </div>
+    </div>
+    <div class="row">
+        <div class="plot">
+            <img src="data:image/png;base64,{{ plot9 }}" alt="Plot 9">
+        </div>
+        <div class="plot">
+            <img src="data:image/png;base64,{{ plot10 }}" alt="Plot 10">
+        </div>
+    </div>
+</div>
+<!-- Unique Values in Dataset Columns Table -->
+<div class="dataset-container">
+    <h1>Unique Values in Dataset Columns:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Column Name</th>
+                <th>Unique Values</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for column in df.columns %}
+                {% if df[column].dtype == 'object' %}
+                    <tr>
+                        <td>{{ column }}</td>
+                        <td>
+                            <ul>
+                                {% for value in df[column].unique() %}
+                                    <li>{{ value }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Additional Table -->
+<div class="dataset-container">
+    <h1>Additional Information:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Total Rows</th>
+                <th>Total Features</th>
+                <th>Output Feature</th>
+                <th>Most Important Input</th>
+                <th>Total Fraud</th>
+                <th>Total Non-Fraud</th>
+                <th>Least Important Input</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Populate the table with the calculated values -->
+                <td>16184</td>
+                <td>15</td>
+                <td>IsFraud</td>
+                <td>Base Policy</td>
+                <td>8613</td>
+                <td>7571</td>
+                <td>Witness present</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

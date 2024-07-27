@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f4; /* Cream colored background */
+    padding: 20px;
+}
+
+h2 {
+    text-align: center; /* Center the heading */
+    font-size: 45px; /* Increase font size for the heading */
+    color: #000; /* Black color for heading */
+    font-weight: bold; /* Bold font for heading */
+    margin-bottom: 20px; /* Add margin below the heading */
+}
+
+.container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    flex-direction: column; /* Display items vertically */
+}
+/* Add this to your existing CSS */
+
+.app-name {
+    color: #FF0000; /* Red color for app name */
+    font-weight: bold; /* Bold font for app name */
+    font-size: 40px;
+}
+.app-info p {
+    font-weight: bold; /* Bold font for app name */
+    color: #050505; /* Red color for app name */
+    font-size: 35px;
+}
+
+.prediction p {
+    font-weight: bold; /* Bold font for app name */
+    color: #050505; /* Red color for app name */
+    font-size: 35px;
+}
+
+.prediction-text {
+    color: #008000; /* Green color for prediction */
+    font-weight: bold; /* Bold font for prediction */
+    font-size: 40px;
+}
+/* Additional table */
+.additional-table-container {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%; /* Set width to fit the screen */
+}
+
+.additional-table-container th,
+.additional-table-container td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Add border */
+}
+
+.additional-table-container th {
+    background-color: #25efa1;
+    color: #333;
+}
+.analysis-container h3 {
+    font-size: 34px; /* Set font size for headline */
+    color: #333; /* Set color for headline */
+    margin-bottom: 10px; /* Add margin below the headline */
+    font-weight: bold; /* Make the text bold */
+    text-align: left; /* Align the text to the left */
+}
+
+.visualization {
+    margin: 10px; /* Add margin around each visualization */
+    display: flex;
+    justify-content: center; /* Center visualizations horizontally */
+    flex-direction: column; /* Display visualizations vertically */
+    align-items: center;
+}
+
+.plot-container {
+    margin: 10px; /* Add margin around each plot */
+}
+
+.row {
+    display: flex; /* Use flexbox for rows */
+    justify-content: center; /* Center plots within the row */
+}
+.plots-container h4 {
+    font-size: 34px; /* Set font size for headline */
+    color: #333; /* Set color for headline */
+    margin-bottom: 10px; /* Add margin below the headline */
+    font-weight: bold; /* Make the text bold */
+    text-align: left; /* Align the text to the left */
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 10px; /* Adjust margin top */
+}
+
+.buttons button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 0 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(134, 4, 4);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #001;
+}
+
+* Container styling */
+.container {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+.app-info {
+    margin-bottom: 20px;
+}
+
+.app-info label {
+    margin-right: 10px;
+}
+
+.app-info input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.app-info button {
+    padding: 8px 20px;
+    background-color: #001;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.app-info button:hover {
+    background-color: #555;
+}
+

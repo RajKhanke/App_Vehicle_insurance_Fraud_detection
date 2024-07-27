@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='appanalysisstyling.css') }}">
+</head>
+<body>
+    <div class="dataset-container">
+        <h1>Dataset Display for Reviews of {{ app_name }}:</h1>
+        <div class="scrollbar">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reviews</th>
+                        <th>Rating</th>
+                        <th>IsReplied</th>
+                        <th>Sentiment classification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Loop through the DataFrame to display -->
+                    {% for index, row in df.iterrows() %}
+                    <tr>
+                        <td>{{ row['content'] }}</td>
+                        <td>{{ row['score'] }}</td>
+                        <td>{{ row['IsReplied'] }}</td>
+                        <td>{{ row['sentiment'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="visualization">
+        <h1>Graphical Analysis : </h1>
+        <div class="row">
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ buffer1 }}" alt="Word Cloud">
+            </div>
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ buffer2 }}" alt="Count Plot of Proper Nouns">
+            </div>
+        </div>
+        <div class="row">
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ buffer3 }}" alt="Network Plot of Words">
+            </div>
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ buffer4 }}" alt="Box Plot of Sentiments vs Score">
+            </div>
+        </div>
+        <div class="row">
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ buffer5 }}" alt="Heatmap of Word Frequency">
+            </div>
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ buffer6 }}" alt="Joint Count Plot of Score">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="buttons">
+        <button onclick="window.location.href='/analysis/app'">Back</button>
+    </div>
+</body>
+</html>

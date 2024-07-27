@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result : </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='vehicle_result.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="result-container">
+            <p class="prediction">{{ result }}</p> 
+        </div>
+    </div>
+    <div class="visualization">
+        <div class="row">
+            <!-- First row -->
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ plot1 }}" alt="Plot 1">
+            </div>
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ plot2 }}" alt="Plot 2">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Second row -->
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ plot3 }}" alt="Plot 3">
+            </div>
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ plot4 }}" alt="Plot 4">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Third row -->
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ plot5 }}" alt="Plot 5">
+            </div>
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ plot6 }}" alt="Plot 6">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Fourth row -->
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ plot7 }}" alt="Plot 7">
+            </div>
+            <div class="plot-container">
+                <img src="data:image/png;base64,{{ plot8 }}" alt="Plot 8">
+            </div>
+            
+        </div>
+    </div>
+    <br>
+    <div class="buttons">
+        <button onclick="window.location.href='/vehicle_insurance'">Back</button>
+    </div>
+</body>
+</html>
