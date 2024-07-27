@@ -199,13 +199,13 @@ def predict_appFraud():
                            plot3=buffer_data3, plot4=buffer_data4, plot5=buffer_data5, plot6=buffer_data6)
 
 # Load the pre-trained model
-best_rf_classifier = load(r'env\RFModel.pkl')
+best_rf_classifier = load('RFModel.pkl')
 
 # Load X_train
-X_train = pd.read_csv('env\X_train.csv')
+X_train = pd.read_csv('X_train.csv')
 
 # Load the dataset
-df = pd.read_csv('env\DVCarFraudDetection.csv')
+df = pd.read_csv('DVCarFraudDetection.csv')
 
 @app.route('/')
 def index():
