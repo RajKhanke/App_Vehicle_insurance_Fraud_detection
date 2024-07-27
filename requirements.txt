@@ -8,3 +8,7 @@ nltk
 google-play-scraper
 networkx
 gunicorn
+plotly
+scikit-learn
+numpy
+
