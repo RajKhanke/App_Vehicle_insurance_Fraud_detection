@@ -9,6 +9,6 @@ google-play-scraper
 networkx
 gunicorn
 plotly
-scikit-learn == 1.2.2
-numpy
+scikit-learn==1.2.2
+numpy==1.25.2
 
