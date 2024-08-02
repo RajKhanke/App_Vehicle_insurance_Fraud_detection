@@ -11,4 +11,4 @@ gunicorn
 plotly
 scikit-learn==1.2.2
 numpy==1.25.2
-
+beautifulsoup4
