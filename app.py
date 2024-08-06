@@ -686,6 +686,5 @@ def analysis_insurance():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
    
    
